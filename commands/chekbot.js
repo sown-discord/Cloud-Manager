@@ -32,13 +32,13 @@ module.exports = {
         const user = client.users.cache.get(data.ID.split("_")[2]);
         const bots = data.data;
 
-        if (bots && Array.isArray(bots)) {
-          const botInfo = bots.map(bot => {
-            return `**ID du bot** : ${bot.id || "Impossible de récupérer l'ID !"}\n**Tag du buyer** : ${user.tag}\n**Date d'expiration** : <t:${Math.floor(new Date(bot.date).getTime() / 1000)}:R>`;
-          }).join("\n\n");
-          embed.addField(`${user.tag}`, botInfo, false);
+        if (bots && bots.length) {
+          embed.addField(`${user.tag}`, bots.map(bot => {
+            return `**ID du bot** : ${bots.id || "Impossible de récuperè id !"}\n**Tag du buyer** : ${user.tag}\n**Date d'expiration** : <t:${Math.floor(new Date(bot.date).getTime() / 1000)}:R>`;
+          }).join("\n\n"), false);
         }
       });
+
       return embed;
     };
 

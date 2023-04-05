@@ -92,7 +92,7 @@ setInterval(() => {
 const server = new websocket.Server({port: 30132});
 const allServers = []
 server.on('connection', ws => {
-    console.log("Connectée au Cloud's Gateway")
+    console.log("Connectée au Lumina [Manager] Gateway")
     
     ws.on('message', async data => {
         console.log(JSON.parse(data))
@@ -101,9 +101,9 @@ server.on('connection', ws => {
              embeds: [
                new Discord.MessageEmbed()
                  .setColor("#FAA61A")
-                 .setTitle("**Connection au Cloud's Gateway**")
+                 .setTitle("**Connection au Lumina [Manager] Gateway**")
                  .setFooter(
-                   `Connection au Cloud's Gateway`,
+                   `Connection au Lumina [Manager] Gateway`,
                  ),
              ],})
 
@@ -119,7 +119,7 @@ server.on('connection', ws => {
                      .setTitle("**Connection au système**")
                      .setDescription(`**${received.tag}** (id: \`${received.id}\`) vient de se connecter au système.`)
                      .setFooter(
-                       `Connection au Cloud's Manager à ${getNow().time}`,
+                       `Connection au Lumina [Manager] Manager à ${getNow().time}`,
                      ),
             ],})
           
@@ -159,7 +159,7 @@ client.on('ready', () => {
             .setColor("#ED4245")
             .setTitle("**Le Manager viens de démarre !**")
             .setFooter(
-              `Connection du Cloud's Manager à ${getNow().time}`,
+              `Connection du Lumina [Manager] Manager à ${getNow().time}`,
             ),
         ],})
       
