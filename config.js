@@ -1,5 +1,5 @@
 module.exports= {
-    token: "MTA5MTQ4NTE4MzIxNzI0NjI3OQ.Gzy9RL.0_Y2UTnX08pQp2kPxAuydWAsymGNm3_bbRoT7k",
+    token: "MTA1MTU1OTM3MDMxNzYzOTgyMQ.G5UimR.u8P29jltKHit2VD5blBRLU8Ss5hMVQlj98QdL4",
     prefix: '.',
     owner: [
         //Sown
